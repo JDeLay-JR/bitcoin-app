@@ -1,13 +1,12 @@
+/* eslint-disable no-console */
 const socket = new WebSocket("wss://ws.blockchain.info/inv");
 
-socket.addEventListener('open', (evt) => {
+// Wait for connection to be established
+socket.addEventListener('open', () => {
+    console.log('Connected to Bitcoin stream')
     socket.send(JSON.stringify({
-        "op": "ping"
+        "op": "unconfirmed_sub"
     }))
 })
-
-socket.addEventListener('message', (evt) => {
-    console.log('Message from server ', evt.data);
-});
 
 export default socket
