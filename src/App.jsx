@@ -1,10 +1,9 @@
 import React from "react";
-import Transaction from "./components/transaction/Transaction";
-// import socket from "./bitcoin/stream-connection";
+import RainContainer from "./components/rain-container/RainContainer";
 
 const App = () => (
   <main>
-    <Transaction />
+    <RainContainer />
   </main>
 );
 
