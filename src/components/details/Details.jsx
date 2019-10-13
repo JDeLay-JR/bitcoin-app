@@ -5,7 +5,7 @@ const Details = props => {
   const { transactionCount, blockCount, date } = props;
   return (
     <div className="card centered">
-      <h1>BTC Transactions</h1>
+      <h1 style={{ textAlign: "center" }}>BTC Transactions</h1>
       <hr></hr>
       <h2>
         Transactions:

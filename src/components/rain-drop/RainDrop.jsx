@@ -41,9 +41,7 @@ class RainDrop extends Component {
   cleanUpRain(hash) {
     const rainNode = document.getElementById(hash);
     rainNode.addEventListener("animationend", () => {
-      rainNode.removeEventListener("animationend", () =>
-        setTimeout(() => rainNode.parentNode.removeChild(rainNode), 10000)
-      );
+      rainNode.remove();
     });
   }
 
