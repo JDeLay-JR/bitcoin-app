@@ -1,0 +1,62 @@
+@import "../../styles/colors.scss";
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 750px;
+    padding: 3rem 5rem;
+    background: $gray;
+    box-shadow: 3px 5px 10px $black;
+    border-radius: .3rem;
+    z-index: 100;
+}
+
+
+.transactionCount {
+    color: $light-green;
+}
+
+.blockCount {
+    color: $dark-green;
+}
+
+.count {
+    float: right;
+}
+
+.date {
+    font-size: 12px;
+    font-family: "Lato";
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    text-align: left;
+    font-family: "Lato"sans-serif;
+    letter-spacing: .1rem;
+    font-weight: 100;
+}
+
+.detail-headline {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14pt;
+    font-family: "Montserrat"sans-serif;
+    letter-spacing: .1rem;
+}
+
+.transaction {
+    width: 50%;
+}
+
+.block {
+    width: 50%;
+}
