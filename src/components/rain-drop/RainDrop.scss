@@ -1,0 +1,67 @@
+@import "../../styles/colors.scss";
+
+.block-light {
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    margin: 1rem;
+    background-image: url("../../images/Bitcoin.svg");
+    animation: 16s rainDownBlock ease;
+    position: absolute;
+    visibility: hidden;
+}
+
+.block-dark {}
+
+.transaction-light {
+    // top: 0;
+    height: 30px;
+    width: 30px;
+    margin: 1rem;
+    background-image: url("../../images/Bitcoin.svg");
+    background-size: cover;
+    animation: 8s rainDownTransaction ease;
+    position: absolute;
+    visibility: hidden;
+}
+
+.transaction-dark {}
+
+@keyframes rainDownTransaction {
+    0% {
+        top: 0;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    100% {
+        top: 95vh;
+        transform: scale(.2);
+    }
+}
+
+@keyframes rainDownBlock {
+    0% {
+        top: 0;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.75);
+    }
+
+    50% {
+        transform: scale(.75);
+    }
+
+    75% {
+        transform: scale(1.75);
+    }
+
+    100% {
+        top: 92vh;
+        transform: scale(.2);
+        transform: rotate(360deg);
+    }
+}

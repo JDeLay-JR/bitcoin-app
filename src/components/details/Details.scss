@@ -1,0 +1,38 @@
+@import "../../styles/colors.scss";
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    max-width: 750px;
+    width: 100%;
+    padding: 3rem 5rem;
+    background: $gray;
+    box-shadow: 3px 5px 10px $black;
+    border-radius: .3rem;
+    z-index: 100;
+}
+
+.transactionCount {
+    color: $light-green;
+}
+
+.blockCount {
+    color: $dark-green;
+}
+
+.count {
+    float: right;
+}
+
+.date {
+    font-size: 12px;
+    font-family: "Lato";
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-align: center;
+}

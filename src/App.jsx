@@ -1,19 +1,10 @@
 import React from "react";
-import socket from "./bitcoin/stream-connection";
-import "./App.css";
-
-const pingWebSocket = () => {
-  socket.send(
-    JSON.stringify({
-      op: "ping"
-    })
-  );
-};
+import RainContainer from "./components/rain-container/RainContainer";
 
 const App = () => (
-  <div className="App">
-    <button onClick={() => pingWebSocket()}>Ping!</button>
-  </div>
+  <main>
+    <RainContainer />
+  </main>
 );
 
 export default App;
