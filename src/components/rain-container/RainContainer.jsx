@@ -99,6 +99,7 @@ class RainContainer extends Component {
             <RainDrop
               key={data.x.hash}
               id={data.x.hash}
+              hash={data.x.hash}
               type="transaction"
               theme={theme}
               width={windowWidth}
@@ -108,6 +109,7 @@ class RainContainer extends Component {
             <RainDrop
               key={data.x.hash}
               id={data.x.hash}
+              hash={data.x.hash}
               type="block"
               theme={theme}
               width={windowWidth}

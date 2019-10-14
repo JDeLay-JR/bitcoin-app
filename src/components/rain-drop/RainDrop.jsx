@@ -18,10 +18,6 @@ class RainDrop extends Component {
     });
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.getWindowWidth);
-  }
-
   render() {
     const { type, theme } = this.props;
     const { xCoordinate } = this.state;
