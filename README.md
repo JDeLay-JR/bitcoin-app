@@ -6,7 +6,7 @@ This application connects to the [Blockchain WebSocket API](https://www.blockcha
 
 ## Development & Local Testing
 
-`npm install && npm run start"
+`npm install && npm run start`
 
 ## Future Goals
 
