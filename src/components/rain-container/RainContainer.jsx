@@ -3,6 +3,8 @@ import socket from "../../stream-connection";
 import RainDrop from "../rain-drop/RainDrop";
 import Details from "../details/Details";
 
+import "./RainContainer.scss";
+
 class RainContainer extends Component {
   constructor() {
     super();
@@ -86,7 +88,7 @@ class RainContainer extends Component {
     } = this.state;
 
     return (
-      <div>
+      <div className="rain-container">
         <Details
           transactionCount={transactionCount}
           blockCount={blockCount}

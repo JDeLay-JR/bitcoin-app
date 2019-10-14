@@ -6,7 +6,7 @@
     background-size: cover;
     margin: 1rem;
     background-image: url("../../images/Bitcoin.svg");
-    animation: 8s rainDown ease;
+    animation: 16s rainDownBlock ease;
     position: absolute;
     visibility: hidden;
 }
@@ -20,20 +20,48 @@
     margin: 1rem;
     background-image: url("../../images/Bitcoin.svg");
     background-size: cover;
-    animation: 5s rainDown;
+    animation: 8s rainDownTransaction ease;
     position: absolute;
     visibility: hidden;
 }
 
 .transaction-dark {}
 
-@keyframes rainDown {
+@keyframes rainDownTransaction {
     0% {
         top: 0;
         visibility: visible;
+        transform: scale(1);
     }
 
     100% {
-        top: 92vh;
+        top: 95vh;
+        transform: scale(.2);
+    }
+}
+
+@keyframes rainDownBlock {
+    0% {
+        top: 0;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.75);
+    }
+
+    50% {
+        transform: scale(.75);
+    }
+
+    75% {
+        transform: scale(1.75);
+    }
+
+    100% {
+        top: 95vh;
+        transform: scale(1);
+        transform: rotate(360deg);
     }
 }

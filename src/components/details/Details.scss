@@ -8,7 +8,8 @@
 }
 
 .card {
-    width: 750px;
+    max-width: 750px;
+    width: 100%;
     padding: 3rem 5rem;
     background: $gray;
     box-shadow: 3px 5px 10px $black;
@@ -35,28 +36,4 @@
     letter-spacing: .1rem;
     text-transform: uppercase;
     text-align: center;
-}
-
-.details {
-    display: flex;
-    text-align: left;
-    font-family: "Lato"sans-serif;
-    letter-spacing: .1rem;
-    font-weight: 100;
-}
-
-.detail-headline {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 14pt;
-    font-family: "Montserrat"sans-serif;
-    letter-spacing: .1rem;
-}
-
-.transaction {
-    width: 50%;
-}
-
-.block {
-    width: 50%;
 }

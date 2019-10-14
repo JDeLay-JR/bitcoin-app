@@ -12,7 +12,7 @@ class RainDrop extends Component {
 
   componentWillMount() {
     const { width } = this.props;
-    const startingXCoordinate = Math.random() * width;
+    const startingXCoordinate = Math.random() * (width - 100);
     this.setState({
       xCoordinate: startingXCoordinate
     });
@@ -38,7 +38,7 @@ class RainDrop extends Component {
 RainDrop.propTypes = {
   type: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
-  windowWidth: PropTypes.number.isRequired
+  width: PropTypes.number.isRequired
 };
 
 export default RainDrop;
