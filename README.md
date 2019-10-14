@@ -2,7 +2,7 @@
 
 ## Description
 
-This application connects to the Blockchain WebSocket API and renders a "rain drop" for each transaction and block created since the user opened the site. There is also a ticker to keep track of the total number of transactions and blocks created during that time period.
+This application connects to the [Blockchain WebSocket API](https://www.blockchain.com/api/api_websocket) and renders a "rain drop" for each transaction and block created since the user opened the site. There is also a ticker to keep track of the total number of transactions and blocks created during that time period.
 
 ## Future Goals
 
