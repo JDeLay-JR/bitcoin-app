@@ -36,3 +36,24 @@
     text-transform: uppercase;
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .card {
+        // width: 100%;
+        border-radius: 0px;
+        background: rgba($gray, .95);
+        padding: 1rem 0rem;
+    }
+
+    .count {
+        float: none;
+        margin: .4rem;
+        display: block;
+        text-align: center;
+    }
+
+    .transactionHeader,
+    .blockHeader {
+        text-align: center;
+    }
+}

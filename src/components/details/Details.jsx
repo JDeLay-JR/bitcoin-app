@@ -8,11 +8,11 @@ const Details = props => {
     <div className="card centered">
       <h1 style={{ textAlign: "center" }}>BTC Transactions</h1>
       <hr></hr>
-      <h2>
+      <h2 className="transactionHeader">
         Transactions:
         <span className="transactionCount count">{transactionCount}</span>
       </h2>
-      <h2>
+      <h2 className="blockHeader">
         Blocks: <span className="blockCount count">{blockCount}</span>
       </h2>
       <p className="date">As of: {date}</p>
