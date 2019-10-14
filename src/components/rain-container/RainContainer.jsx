@@ -12,9 +12,8 @@ class RainContainer extends Component {
       transactionCount: 0,
       blocks: [],
       blockCount: 0,
-      mostValuedBlock: {},
-      mostValuedTransaction: {},
-      theme: "light"
+      theme: "light",
+      windowWidth: 350
     };
   }
 
@@ -24,7 +23,7 @@ class RainContainer extends Component {
     // Wait for connection to be established
     socket.addEventListener("open", () => {
       console.log("Connected to Bitcoin Stream");
-      // Subscrube to new transactions
+      // Subscribe to new transactions
       socket.send(
         JSON.stringify({
           op: "unconfirmed_sub"
@@ -54,6 +53,18 @@ class RainContainer extends Component {
         }));
       }
     };
+    this.getWindowWidth();
+    window.addEventListener("resize", this.getWindowWidth());
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.getWindowWidth);
+  }
+
+  getWindowWidth() {
+    this.setState({
+      windowWidth: window.innerWidth
+    });
   }
 
   toggleTheme() {
@@ -70,9 +81,8 @@ class RainContainer extends Component {
       blocks,
       blockCount,
       theme,
-      date,
-      mostValuedBlock,
-      mostValuedTransaction
+      windowWidth,
+      date
     } = this.state;
 
     return (
@@ -81,24 +91,24 @@ class RainContainer extends Component {
           transactionCount={transactionCount}
           blockCount={blockCount}
           date={date}
-          mostValuedBlock={mostValuedBlock}
-          mostValuedTransaction={mostValuedTransaction}
         />
         <div id="rainContainer">
           {transactions.map(data => (
             <RainDrop
               key={data.x.hash}
-              hash={data.x.hash}
+              id={data.x.hash}
               type="transaction"
               theme={theme}
+              width={windowWidth}
             />
           ))}
           {blocks.map(data => (
             <RainDrop
               key={data.x.hash}
-              hash={data.x.hash}
+              id={data.x.hash}
               type="block"
               theme={theme}
+              width={windowWidth}
             />
           ))}
         </div>

@@ -1,6 +1,9 @@
+@import "../../styles/colors.scss";
+
 .block-light {
     height: 60px;
     width: 60px;
+    background-size: cover;
     margin: 1rem;
     background-image: url("../../images/Bitcoin.svg");
     animation: 8s rainDown ease;
@@ -12,10 +15,11 @@
 
 .transaction-light {
     // top: 0;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     margin: 1rem;
     background-image: url("../../images/Bitcoin.svg");
+    background-size: cover;
     animation: 5s rainDown;
     position: absolute;
     visibility: hidden;

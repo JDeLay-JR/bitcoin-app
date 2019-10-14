@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Details.scss";
 
 const Details = props => {
@@ -15,23 +16,14 @@ const Details = props => {
         Blocks: <span className="blockCount count">{blockCount}</span>
       </h2>
       <p className="date">As of: {date}</p>
-      <hr></hr>
-      <div className="details">
-        <div className="transaction">
-          <p className="detail-headline">Most Valuable Transaction</p>
-          <p>Time Generated:</p>
-          <p>Value:</p>
-          <p>Hash:</p>
-        </div>
-        <div className="block">
-          <p className="detail-headline">Most Valuable Block</p>
-          <p>Time Generated:</p>
-          <p>Value:</p>
-          <p>Hash:</p>
-        </div>
-      </div>
     </div>
   );
+};
+
+Details.propTypes = {
+  transactionCount: PropTypes.number.isRequired,
+  blockCount: PropTypes.number.isRequired,
+  date: PropTypes.string.isRequired
 };
 
 export default Details;
